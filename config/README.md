@@ -27,8 +27,8 @@
 |`object_text_bg_color`|目标框顶部文字的背景颜色，BGRA浮点型数组格式，BGR三通道的范围是`[0,255]`，第四个元素不使用，默认：`[50, 50, 50, 0]`|否|否|`array`|
 |`object_text_size`|目标框顶部文字大小，整形，范围`[1,50]`，默认：`30`|否|否|`int`|
 |`draw_warning_text`|是否画报警信息文字，`true`是，`false`否，默认：`true`|否|否|`bool`|
-|`mark_text_en`|目标文字（英文），默认：`dog`|否|否|`string`|
-|`mark_text_zh`|目标文字（中文），默认：`狗`|否|否|`string`|
+|`mark_text_en`|目标文字（英文），可选值`person`,`hat`,`head`,默认：`[`person`,`hat`,`head`]`|否|否|`array`|
+|`mark_text_zh`|目标文字（中文），可选值`人`,`帽子`,`头`，应与`mark_text_en`设置对应,默认：`[`人`,`帽子``,`头`]`|否|否|`array`|
 |`warning_text_en`|报警文字（英文），默认：`WARNING!`|否|否|`string`|
 |`warning_text_zh`|报警文字（中文），默认：`警告！`|否|否|`string`|
 |`warning_text_size`|报警文字大小，范围`[1,50]`，默认:`30`|否|否|`array`|
@@ -49,7 +49,7 @@
     "roi_fill": false,
     "draw_result": true,
     "draw_confidence": true,
-    "thresh": 0.55,
+    "thresh": 0.25,
     "language": "en",
 
     "target_rect_color": [0, 255, 0, 0],
