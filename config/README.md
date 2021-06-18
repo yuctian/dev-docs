@@ -28,7 +28,7 @@
 |`object_text_size`|目标框顶部文字大小，整形，范围`[1,50]`，默认：`30`|否|否|`int`|
 |`draw_warning_text`|是否画报警信息文字，`true`是，`false`否，默认：`true`|否|否|`bool`|
 |`mark_text_en`|目标文字（英文），可选值`person`,`hat`,`head`,默认：`[`person`,`hat`,`head`]`|否|否|`array`|
-|`mark_text_zh`|目标文字（中文），可选值`人`,`帽子`,`头`，应与`mark_text_en`设置对应,默认：`[`人`,`帽子``,`头`]`|否|否|`array`|
+|`mark_text_zh`|目标文字（中文），可选值`人`,`帽子`,`头`，应与`mark_text_en`设置对应,默认：`[`人`,`帽子`,`头`]`|否|否|`array`|
 |`warning_text_en`|报警文字（英文），默认：`WARNING!`|否|否|`string`|
 |`warning_text_zh`|报警文字（中文），默认：`警告！`|否|否|`string`|
 |`warning_text_size`|报警文字大小，范围`[1,50]`，默认:`30`|否|否|`array`|
@@ -40,7 +40,7 @@
 ### 1.1 示例配置
 
 ```json
-{
+{   "model":"yolov5m",
     "gpu_id": 0,
     "draw_roi_area": true,
     "roi_color": [255, 255, 0, 0.7],
@@ -57,8 +57,8 @@
     "object_text_color": [255, 255, 255, 0],
     "object_text_bg_color": [50, 50, 50, 0],
     "object_text_size": 30,
-    "mark_text_en": "dog",
-    "mark_text_zh": "狗",
+    "mark_text_en": ["person","haed","hat"],
+    "mark_text_zh": ["人","头","帽子"],
     "draw_warning_text": true,
     "warning_text_en": "WARNING! WARNING!",
     "warning_text_zh": "警告!",
